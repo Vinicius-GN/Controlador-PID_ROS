@@ -33,13 +33,13 @@ def control_main():
     integral_error = 0.0
     previous_error = 0.0
 
-    y = []
+    y = [0]
+    total_time = 0
 
     #Initial time
     current_time = past_time = rospy.Time.now()
 
     while not rospy.is_shutdown():
-
         while ((current_time - past_time).to_sec() < definitions.PERIOD):
             #Calculate the error
             error = velocity_ref - current_velocity
@@ -81,13 +81,15 @@ def control_main():
 
             print(f"Time{(current_time - past_time).to_sec()}")
             print('')
-            rospy.sleep(0.3)
+            rospy.sleep(0.05)
+        
         #Stop the robot and get another reference velocity
         velocity_msg.linear.x = 0
         velocity_publisher.publish(velocity_msg)
 
         #Plotando o gráfico de conversão:
-        x = np.linspace(0, 10, 35)
+        total_time += definitions.PERIOD
+        x = np.linspace(0, total_time, len(y))
         ref = velocity_ref*np.ones_like(x)
         plt.plot(x, y, label='Velocidade Linear (V)')
         plt.plot(x, ref, label='Referência')
