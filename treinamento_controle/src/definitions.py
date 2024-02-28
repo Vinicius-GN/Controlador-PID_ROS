@@ -1,13 +1,15 @@
 #Defining the PID parameters
-KP = 5.0
-KI = 0.1
-KD = 0.3
+KP = 0.4
+KI = 0.03
+KD = 0.2
 
 #Defining the maximum and minimum values for the control signal
-MAX_VEL = 5
-MIN_VEL = -5
+MAX_VEL = 1
+MIN_VEL = -1
+MAX_INTEGRAL = 5
+MIN_INTEGRAL = 0.1
 
-#Defining the Period of the control loop:
-PERIOD = 1.0
+#Defining the Period of the control loop
+PERIOD = 10
 
 INITIAL_VEL = 0.0
