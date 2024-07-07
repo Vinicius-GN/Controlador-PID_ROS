@@ -76,8 +76,5 @@ Os gráficos a seguir mostram a resposta do controlador PID em diferentes cenár
    roslaunch seu_pacote control.launch
 
 <p align="center">
-  <video width="80%" controls>
-    <source src="docs/video.mp4" type="video/mp4">
-    Seu navegador não suporta a tag de vídeo.
-  </video>
+  <a href="docs/video.mp4">Clique aqui para assistir ao vídeo de teste</a>
 </p>
