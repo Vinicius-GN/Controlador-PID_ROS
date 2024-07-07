@@ -35,8 +35,8 @@ Um arquivo de launch (`control.launch`) é usado para iniciar o Gazebo com um mu
 
 Os gráficos a seguir mostram a resposta do controlador PID em diferentes cenários de velocidade de referência.
 
-![Gráfico de Velocidade](path/to/graph1.png)
-![Gráfico de Velocidade](path/to/graph2.png)
+![Gráfico de Velocidade](docs/result1.png)
+![Gráfico de Velocidade](docs/result2.png)
 
 ## Como Testar
 
