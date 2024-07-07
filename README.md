@@ -2,6 +2,10 @@
 
 Este projeto implementa um controlador PID para controlar a velocidade de um robô simulado no Gazebo usando o ROS.
 
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Feedback_loop_with_descriptions.svg/400px-Feedback_loop_with_descriptions.svg.png" alt="Gráfico de Velocidade">
+</p>
+
 ## O que é um Controlador PID?
 
 Um controlador PID (Proporcional, Integral, Derivativo) é um mecanismo de controle usado em sistemas de controle industrial. Ele ajusta a saída de um processo para manter a variável de controle (por exemplo, a velocidade do robô) próxima do valor desejado (setpoint).
@@ -35,8 +39,10 @@ Um arquivo de launch (`control.launch`) é usado para iniciar o Gazebo com um mu
 
 Os gráficos a seguir mostram a resposta do controlador PID em diferentes cenários de velocidade de referência.
 
-![Gráfico de Velocidade](docs/result1.png)
-![Gráfico de Velocidade](docs/result2.png)
+<p align="center">
+  <img src="docs/result1.png" alt="Gráfico de Velocidade 1" width="45%" />
+  <img src="docs/result2.png" alt="Gráfico de Velocidade 2" width="45%" />
+</p>
 
 ## Como Testar
 
@@ -54,3 +60,24 @@ Os gráficos a seguir mostram a resposta do controlador PID em diferentes cenár
    ```bash
    git clone https://github.com/seu_usuario/seu_repositorio.git
    cd seu_repositorio
+
+2. **Compile o Workspace**
+   Navegue até o workspace do ROS e compile os pacotes.
+   
+   ```bash
+   cd ~/catkin_ws
+   catkin_make
+   source devel/setup.sh
+
+3. **Execute o Arquivo Launch**
+   Execute o arquivo control.launch para iniciar o Gazebo e o controlador PID.
+      
+   ```bash
+   roslaunch seu_pacote control.launch
+
+<p align="center">
+  <video width="80%" controls>
+    <source src="docs/resultvid.webm" type="video/webm">
+    Seu navegador não suporta a tag de vídeo.
+  </video>
+</p>
