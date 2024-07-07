@@ -10,6 +10,6 @@ MAX_INTEGRAL = 5
 MIN_INTEGRAL = 0.1
 
 #Defining the Period of the control loop
-PERIOD = 5
+PERIOD = 3
 
 INITIAL_VEL = 0.0

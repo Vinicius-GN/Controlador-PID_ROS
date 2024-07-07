@@ -1,0 +1,5 @@
+<launch>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch" />
+  <node pkg="seu_pacote" type="seu_script.py" name="treinamento_controle" output="screen" />
+</launch>
+

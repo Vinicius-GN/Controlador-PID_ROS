@@ -17,6 +17,9 @@ def get_reference_velocity():
 def control_main():
     rospy.init_node('treinamento_controle', anonymous=True) #Se nao funcionar, tentar treinamento_controle
     velocity_publisher = rospy.Publisher("/cmd_vel", Twist, queue_size=10)
+    rospy.init_node('treinamento_controle', anonymous=True)
+    rospy.set_param('/use_sim_time', True)
+
 
     #Velocity message and reference velocity
     velocity_msg = Twist()
@@ -68,7 +71,7 @@ def control_main():
             print(f'Control signal2: {control_signal}')
 
             #Here we calculate the new velocity
-            current_velocity += control_signal #Is this right?
+            current_velocity += control_signal
             y.append(current_velocity)
 
             print("Current velocity: ", current_velocity)
@@ -94,7 +97,7 @@ def control_main():
         plt.plot(x, y, label='Velocidade Linear (V)')
         plt.plot(x, ref, label='Referência')
         plt.xlabel('Tempo (seg)')
-        plt.ylabel('Velocidade Linear (V)')
+        plt.ylabel('Velocidade Linear (M/s)')
         plt.title('Resposta do Controlador PID')
         plt.legend()
         plt.grid(True)
