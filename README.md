@@ -77,7 +77,7 @@ Os gráficos a seguir mostram a resposta do controlador PID em diferentes cenár
 
 <p align="center">
   <video width="80%" controls>
-    <source src="docs/resultvid.webm" type="video/webm">
+    <source src="docs/video.mp4" type="video/mp4">
     Seu navegador não suporta a tag de vídeo.
   </video>
 </p>
